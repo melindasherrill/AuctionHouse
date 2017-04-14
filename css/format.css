@@ -1,0 +1,22 @@
+div#center{
+	width:600px;
+}
+p{
+	font-size: 35;
+}
+h2{
+	font-size: 50;
+}
+button#button{
+	border: none;
+	background-color: #FFB6C1;
+	border-radius: 25px;
+}
+submitColor#button{
+	border: none;
+	background-color: #FFB6C1;
+	border-radius: 25px;
+}
+body{
+	background-color: beige;
+}
