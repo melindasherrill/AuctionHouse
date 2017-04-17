@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/homepage.css">
 <style>
     body {font-family: "Lato", sans-serif}
     .mySlides {display: none}
@@ -14,20 +14,20 @@
 
 <!-- Navbar -->
 <div class="w3-top">
-    <div id = "pink" class="w3-bar w3-black w3-card-2">
+    <div class="w3-bar w3-pink w3-card-2">
         <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-        <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
-        <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-        <div class="w3-dropdown-hover w3-hide-small">
+        <a href="viewevent.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">EVENTS</a>
+        <a href="viewbid.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BIDS</a>
+        <a href="settings.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SETTINGS</a>
+        <!-- <div class="w3-dropdown-hover w3-hide-small">
             <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
                 <a href="#" class="w3-bar-item w3-button">Merchandise</a>
                 <a href="#" class="w3-bar-item w3-button">Extras</a>
                 <a href="#" class="w3-bar-item w3-button">Media</a>
             </div>
-        </div>
+        </div> -->
         <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
     </div>
 </div>
@@ -47,47 +47,45 @@
     <div class="mySlides w3-display-container w3-center">
         <img src="/AuctionHouse/img/PinkiePie.png" style="width:100%">
         <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-            <h3>Welcome to the Auction Center</h3>
+            <h3>Hello</h3>
         </div>
     </div>
     <div class="mySlides w3-display-container w3-center">
         <img src="/AuctionHouse/img/PinkiePie2.png" style="width:100%">
         <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-            <h3>View Upcoming Events</h3>
+            <h3>World</h3>
         </div>
     </div>
     <div class="mySlides w3-display-container w3-center">
         <img src="/AuctionHouse/img/PinkiePie3.png" style="width:100%">
         <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-            <h3>View Bids</h3>
+            <h3>!</h3>
         </div>
     </div>
 
     <!-- The Band Section -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-        <h2 class="w3-wide">THE BAND</h2>
-        <p class="w3-opacity"><i>We love music</i></p>
-        <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h2 class="w3-wide">KEVIN IS THE BEST</h2>
+        <p class="w3-opacity"><i>Pretty Page: Check!</i></p>
+        <p class="w3-justify">Pretty body text: Check!</p>
         <div class="w3-row w3-padding-32">
             <div class="w3-third">
-                <p>Name</p>
-                <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+                <p>Meow</p>
+                <img src="/AuctionHouse/img/buffalo.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
             </div>
             <div class="w3-third">
-                <p>Name</p>
-                <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+                <p>Meow</p>
+                <img src="/AuctionHouse/img/chicken.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
             </div>
             <div class="w3-third">
-                <p>Name</p>
-                <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
+                <p>Meow</p>
+                <img src="/AuctionHouse/img/philly.jpg" class="w3-round" alt="Random Name" style="width:60%">
             </div>
         </div>
     </div>
 
     <!-- The Tour Section -->
-    <div class="w3-black" id="tour">
+    <div class="w3-pink" id="tour">
         <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
             <h2 class="w3-wide w3-center">TOUR DATES</h2>
             <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
@@ -100,30 +98,30 @@
 
             <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
                 <div class="w3-third w3-margin-bottom">
-                    <img src="/w3images/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                    <img src="/AuctionHouse/img/red.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
                     <div class="w3-container w3-white">
-                        <p><b>New York</b></p>
-                        <p class="w3-opacity">Fri 27 Nov 2016</p>
-                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                        <p><b>Red Clam Chowder</b></p>
+                        <p class="w3-opacity">YUMMY YUMMY</p>
+                        <p>NOM NOM NOM</p>
+                        <button class="w3-button w3-pink w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">FOOD</button>
                     </div>
                 </div>
                 <div class="w3-third w3-margin-bottom">
-                    <img src="/w3images/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+                    <img src="/AuctionHouse/img/ramen.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
                     <div class="w3-container w3-white">
-                        <p><b>Paris</b></p>
-                        <p class="w3-opacity">Sat 28 Nov 2016</p>
-                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                        <p><b>Ramen</b></p>
+                        <p class="w3-opacity">YUMMY YUMMY</p>
+                        <p>NOM NOM NOM</p>
+                        <button class="w3-button w3-pink w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">FOOD</button>
                     </div>
                 </div>
                 <div class="w3-third w3-margin-bottom">
-                    <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+                    <img src="/AuctionHouse/img/tortilla.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
                     <div class="w3-container w3-white">
-                        <p><b>San Francisco</b></p>
-                        <p class="w3-opacity">Sun 29 Nov 2016</p>
-                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                        <p><b>Tortilla Soup</b></p>
+                        <p class="w3-opacity">YUMMY YUMMY</p>
+                        <p>NOM NOM NOM</p>
+                        <button class="w3-button w3-pink w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">FOOD</button>
                     </div>
                 </div>
             </div>
