@@ -62,7 +62,7 @@
 				$pass = "329ebdbf";
 				$dbname = "auctionhouse_se320";
 				$table = "testTable";
-				
+				//FIX ME mySQL->mySQLi
 				$link = mysqli_connect($host,$user, $pass) or die("<html><script language='JavaScript'>alert('Unable to connect to db since Sam, our database programmer, is a noob.'),history.go(-1)</script></html>");
 				mysql_select_db($dbname);
 				mysql_query("CALL addUser('$email', '$password','$name', 1)");//parameter: emailIN, passwordIN,nameIN, userTypeIN: 1-User, 2-auctionhouse 3-employee.
