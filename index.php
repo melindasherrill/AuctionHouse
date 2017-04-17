@@ -9,9 +9,9 @@
 		<h1 style = "color:grey">New Vistor? Create an account!</h1>
 		<p></p>
 		<div id='main'>
-			<button type='button' id= 'button' class='btn btn-info btn-md' onclick="window.location.href='/buyercreate.php'">  I am a Buyer </button>
-			<button type='button' id= 'button' class='btn btn-info btn-md' onclick="window.location.href='/vendorcreate.php'">  I am an Auction Vendor </button>
-			<button type='button' id= 'button' class='btn btn-info btn-md' onclick="window.location.href='/employeecreate.php'">  I am an AuctionCentral Employee </button>
+			<button type='button' id= 'button' class='btn btn-info btn-md' onclick="window.location.href='/AuctionHouse/buyercreate.php'">  I am a Buyer </button>
+			<button type='button' id= 'button' class='btn btn-info btn-md' onclick="window.location.href='/AuctionHouse/vendorcreate.php'">  I am an Auction Vendor </button>
+			<button type='button' id= 'button' class='btn btn-info btn-md' onclick="window.location.href='/AuctionHouse/employeecreate.php'">  I am an AuctionCentral Employee </button>
 		</div>
 		<p></p>
 		<h1 style = "color:grey">Are you a Returning Vistor?</h1>
