@@ -87,8 +87,8 @@
     <!-- The Tour Section -->
     <div class="w3-pink" id="tour">
         <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-            <h2 class="w3-wide w3-center">TOUR DATES</h2>
-            <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
+            <h2 class="w3-wide w3-center">UPCOMING EVENTS</h2>
+            <p class="w3-opacity w3-center"><i></i></p><br>
 
             <ul class="w3-ul w3-border w3-white w3-text-grey">
                 <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
@@ -151,12 +151,12 @@
     <!-- The Contact Section -->
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
         <h2 class="w3-wide w3-center">CONTACT</h2>
-        <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+        <p class="w3-opacity w3-center"><i>Keep Up to Date</i></p>
         <div class="w3-row w3-padding-32">
             <div class="w3-col m6 w3-large w3-margin-bottom">
-                <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-                <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-                <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+                <i class="fa fa-map-marker" style="width:30px"></i> California, US<br>
+                <i class="fa fa-phone" style="width:30px"></i> Phone: 123 456 7890<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: blahblah@blahmail.com<br>
             </div>
             <div class="w3-col m6">
                 <form action="/action_page.php" target="_blank">
