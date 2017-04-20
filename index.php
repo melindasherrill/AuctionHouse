@@ -154,7 +154,7 @@
             <header class="w3-container w3-teal w3-center w3-padding-32">
         <span onclick="document.getElementById('loginModal').style.display='none'"
               class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-                <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+                <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>LOGIN</h2>
             </header>
             <div class="w3-container">
                 <p><label><i class="fa fa-shopping-cart"></i> Username </label></p>
