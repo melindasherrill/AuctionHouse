@@ -23,10 +23,10 @@
         <div class="w3-dropdown-hover w3-hide-small">
             <button class="w3-padding-large w3-button" title="More">ACCOUNT <i class="fa fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('loginModal').style.display='block'">EMPLOYEE LOGIN</a>
-                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('loginModal').style.display='block'">BUYER LOGIN</a>
-                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('loginModal').style.display='block'">VENDOR LOGIN</a>
-                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('signupModal').style.display='block'">SIGN UP</a>
+                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('loginModal').style.display='block'">LOGIN</a>
+                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('signupModal').style.display='block'">BUYER CREATE</a>
+                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('signupModal').style.display='block'">VENDOR CREATE</a>
+                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('signupModal').style.display='block'">EMPLOYEE CREATE</a>
             </div>
         </div>
         <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
@@ -88,12 +88,12 @@
     <!-- The Tour Section -->
     <div class="w3-pink" id="tour">
         <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-            <h2 class="w3-wide w3-center">UPCOMING EVENTS</h2>
+            <h2 class="w3-wide w3-center">UPCOMING AUCTIONS</h2>
             <p class="w3-opacity w3-center"><i></i></p><br>
 
             <ul class="w3-ul w3-border w3-white w3-text-grey">
-                <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-                <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
+                <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">5</span></li>
+                <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">2</span></li>
                 <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
             </ul>
 
@@ -149,6 +149,7 @@
         </div>
     </div>
     <!-- Login Modal -->
+     <form action="index.php" method="post">
     <div id="loginModal" class="w3-modal">
         <div class="w3-modal-content w3-animate-top w3-card-4">
             <header class="w3-container w3-teal w3-center w3-padding-32">
@@ -158,16 +159,42 @@
             </header>
             <div class="w3-container">
                 <p><label><i class="fa fa-shopping-cart"></i> Username </label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Username">
+                <input name="user" class="w3-input w3-border" type="text" placeholder="Username">
                 <p><label><i class="fa fa-user"></i> Password </label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Password">
-                <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">SUBMIT <i class="fa fa-check"></i></button>
-                <button class="w3-button w3-red w3-section" onclick="document.getElementById('loginModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-                <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+                <input name="pass" class="w3-input w3-border" type="text" placeholder="Password">
+                <button name="submit" type="submit" class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">SUBMIT <i class="fa fa-check"></i></button>
+                
             </div>
+        </form>
+            <?php
+
+                $host = "localhost";
+                $user = "root";
+                $pass = "";
+                $dbname = "auction";
+              
+                $con = mysqli_connect($host, $user, $pass, $dbname) or die("<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>");
+                
+
+                if(isset($_POST["submit"])) { //once submit button is hit, go here
+                    $email = $_POST['user']; //loads email
+                    $pass2 = $_POST['pass']; //loads password
+
+                     //echo "<html><script language='JavaScript'>window.location.href='/buyercreate.php'</script></html>";
+                    
+                    if(mysqli_connect_errno()){
+                        echo "<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>";
+                    }
+
+                    if(mysqli_query($con, "CALL logIn('$email', '$pass2')")==TRUE){
+                         echo "<html><script language='JavaScript'>window.location.href='/signup.php'</script></html>";
+                    }
+            }
+            ?>
         </div>
     </div>
     <!-- Sign up Modal -->
+    <form action="signup.php" method="post">
     <div id="signupModal" class="w3-modal">
         <div class="w3-modal-content w3-animate-top w3-card-4">
             <header class="w3-container w3-teal w3-center w3-padding-32">
@@ -176,18 +203,25 @@
                 <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>CREATE ACCOUNT</h2>
             </header>
             <div class="w3-container">
-                <p><label><i class="fa fa-shopping-cart"></i> Username </label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Username">
+                <p><label><i class="fa fa-shopping-cart"></i> Name </label></p>
+                <input name="name" name= "user" class="w3-input w3-border" type="text" placeholder="Name">
+                <p><label><i class="fa fa-shopping-cart"></i> Email </label></p>
+                <input name= "user" class="w3-input w3-border" type="text" placeholder="Username">
                 <p><label><i class="fa fa-user"></i>Password</label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Password">
+                <input name ="pass" class="w3-input w3-border" type="text" placeholder="Password">
                 <p><label><i class="fa fa-user"></i>Repeat Password</label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Password">
-                <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">SUBMIT <i class="fa fa-check"></i></button>
-                <button class="w3-button w3-red w3-section" onclick="document.getElementById('signupModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-                <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+                <input name="pass2" class="w3-input w3-border" type="text" placeholder="Password">
+                <p><label><i class="fa fa-shopping-cart"></i> Address </label></p>
+                <input name= "address" class="w3-input w3-border" type="text" placeholder="Username">
+                <p><label><i class="fa fa-shopping-cart"></i> Credit Card </label></p>
+                <input name= "card" class="w3-input w3-border" type="text" placeholder="####-####-####">
+                <p><label><i class="fa fa-shopping-cart"></i> CVV </label></p>
+                <input name= "CVV" class="w3-input w3-border" type="text" placeholder="CVV">
+                <button name = "submit" type="submit" class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">SUBMIT <i class="fa fa-check"></i></button>
             </div>
         </div>
     </div>
+</form>
 
     <!-- The Contact Section -->
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
@@ -219,17 +253,6 @@
     <!-- End Page Content -->
 </div>
 
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
 
 <script>
     // Automatic Slideshow - change image every 4 seconds

@@ -79,7 +79,7 @@
 				
 			}
 			else{
-				echo "<html><script language='JavaScript'>alert('Password is bad. Make sure passwords match, have less than 8 characters, and contain at least one special character.'),history.go(-1)</script></html>";
+				echo "<html><script language='JavaScript'> window.location.href = '/employeecreate.php';</script></html>";
 			}
 		}
 

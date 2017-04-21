@@ -49,14 +49,14 @@
 			if(goodPass($password, $pass2)){
 			
 				//DB STOOF
-				$host = "us-cdbr-azure-west-b.cleardb.com";
-				$user = "b3c82d871b9b10";
-				$pass = "329ebdbf";
-				$dbname = "auctionhouse_se320";
-				$table = "testTable";
-				
-				$link = mysqli_connect($host,$user, $pass, $dbname) or die("<html><script language='JavaScript'>alert('Unable to connect to db since Sam, our database programmer, is a noob.'),history.go(-1)</script></html>");
-				mysqli_select_db($link, $dbname);
+				$host = "localhost";
+                $user = "root";
+                $pass = "";
+                $dbname = "auction";
+               // $table = "testTable";
+
+                echo "<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>";
+                $con = mysqli_connect($host, $user, $pass, $dbname);
 
 
 				$accountExists = mysql_query("CALL logIn('$email','$password')");//check is account is there
