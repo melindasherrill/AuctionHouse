@@ -166,8 +166,8 @@
                 
             </div>
         </form>
-            <?php
-
+<!--            --><?php
+/*
                 $host = "localhost";
                 $user = "root";
                 $pass = "";
@@ -190,7 +190,7 @@
                          echo "<html><script language='JavaScript'>window.location.href='/signup.php'</script></html>";
                     }
             }
-            ?>
+            */?>
         </div>
     </div>
     <!-- Sign up Modal -->
