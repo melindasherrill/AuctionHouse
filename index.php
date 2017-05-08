@@ -168,10 +168,10 @@
         </form>
             <?php
 
-                $host = "localhost";
-                $user = "root";
-                $pass = "";
-                $dbname = "auction";
+                $host = "us-cdbr-azure-west-b.cleardb.com";
+                $user = "b3c82d871b9b10";
+                $pass = "329ebdbf";
+                $dbname = "auctionhouse_se320";
               
                 $con = mysqli_connect($host, $user, $pass, $dbname) or die("<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>");
                 
@@ -186,15 +186,15 @@
                         echo "<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>";
                     }
 
-                    if(mysqli_query($con, "CALL logIn('$email', '$pass2')")==TRUE){
-                         echo "<html><script language='JavaScript'>window.location.href='/signup.php'</script></html>";
+                    if(mysqli_query($con, "CALL logIn('".$email."', '".$pass2."')")==TRUE){
+                         echo "<html><script language='JavaScript'>window.location.href='/main.php'</script></html>";
                     }
             }
             ?>
         </div>
     </div>
     <!-- Sign up Modal -->
-    <form action="signup.php" method="post">
+    <form action="signup1.php" method="post">
     <div id="signupModal" class="w3-modal">
         <div class="w3-modal-content w3-animate-top w3-card-4">
             <header class="w3-container w3-teal w3-center w3-padding-32">

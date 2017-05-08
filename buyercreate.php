@@ -49,26 +49,26 @@
 			if(goodPass($password, $pass2)){
 			
 				//DB STOOF
-				$host = "localhost";
-                $user = "root";
-                $pass = "";
-                $dbname = "auction";
+				$host = "us-cdbr-azure-west-b.cleardb.com";
+                $user = "b3c82d871b9b10";
+                $pass = "329ebdbf";
+                $dbname = "auctionhouse_se320";
                // $table = "testTable";
 
                 echo "<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>";
                 $con = mysqli_connect($host, $user, $pass, $dbname);
 
 
-				$accountExists = mysql_query("CALL logIn('$email','$password')");//check is account is there
+				//$accountExists = mysqli_query("CALL logIn('$email','$password')");//check is account is there
 				if($accountExists){
 					echo "<html><script language='JavaScript'>alert('This email is already associated with an account!.'),history.go(-1)</script></html>";
 				}
 				else{ //add account
-					mysql_query("CALL addUser('$email', '$password','$name', 1)");//parameter: emailIN, passwordIN,nameIN, userTypeIN: 1-User, 2-auctionhouse 3-employee.
+					mysqli_query($con, "CALL addUser('$email', '$password','$name', 1)");//parameter: emailIN, passwordIN,nameIN, userTypeIN: 1-User, 2-auctionhouse 3-employee.
 					//mysql_query("CALL addCard('$card', '$CSV')"); //add card
 					//mysql_query("CALL addAddress('$companyname','$address')");//comapny name is null
 				}	
-				mysql_close($link);
+				mysqli_close($link);
 				
 			}
 			else{

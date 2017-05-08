@@ -63,9 +63,8 @@
 				$dbname = "auctionhouse_se320";
 				$table = "testTable";
 				//FIX ME mySQL->mySQLi
-				$link = mysqli_connect($host,$user, $pass) or die("<html><script language='JavaScript'>alert('Unable to connect to db since Sam, our database programmer, is a noob.'),history.go(-1)</script></html>");
-				mysql_select_db($dbname);
-				mysql_query("CALL addUser('$email', '$password','$name', 1)");//parameter: emailIN, passwordIN,nameIN, userTypeIN: 1-User, 2-auctionhouse 3-employee.
+				$link = mysqli_connect($host,$user, $pass, $dbname) or die("<html><script language='JavaScript'>alert('Unable to connect to db since Sam, our database programmer, is a noob.'),history.go(-1)</script></html>");
+				mysqli_query($link, "CALL addUser('$email', '$password','$name', 1)");//parameter: emailIN, passwordIN,nameIN, userTypeIN: 1-User, 2-auctionhouse 3-employee.
 				//mysql_query("CALL addCard('$card', '$CSV')"); //add card
 				//mysql_query("CALL addAddress('$companyname','$address')");//comapny name is null
 				// if($result){
@@ -75,7 +74,7 @@
 				// 	}
 				// } 
 
-				mysql_close($link);
+				mysqli_close($link);
 				
 			}
 			else{

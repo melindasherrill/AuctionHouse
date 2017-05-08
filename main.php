@@ -18,17 +18,16 @@
         <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
         <a href="viewevent.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">EVENTS</a>
-         <div class="w3-dropdown-hover w3-hide-small">
+        <div class="w3-dropdown-hover w3-hide-small">
             <button class="w3-padding-large w3-button" title="More">SETTINGS <i class="fa fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
                 <a href="index.php" class="w3-bar-item w3-button">LOG OUT</a>
             </div>
-        </div>
-       <div class="w3-dropdown-hover w3-hide-small">
+        </div>        <div class="w3-dropdown-hover w3-hide-small">
             <button class="w3-padding-large w3-button" title="More">ITEMS <i class="fa fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('loginModal').style.display='block'">VIEW ITEMS</a>
-                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('signupModal').style.display='block'">ADD ITEMS</a>
+                <a href="/items.php" class="w3-bar-item w3-button" onclick="document.getElementById('loginMoal').style.display='block'">VIEW ITEMS</a>
+                <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('itemsModal').style.display='block'">ADD ITEMS</a>
             </div>
         </div>
         <div class="w3-dropdown-hover w3-hide-small">
@@ -37,6 +36,7 @@
                 <a href="#" onclick="document.getElementById('AuctionModal').style.display='block'" class="w3-bar-item w3-button">REQUEST AUCTION</a>
             </div>
         </div> 
+       
         <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
     </div>
 </div>
@@ -74,7 +74,7 @@
 
     <!-- The Band Section -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-        <h2 class="w3-wide">Here are the current items: </h2>
+        <h2 class="w3-wide">Welcome, John!</h2>
         <p class="w3-opacity"><i></i></p>
         <p class="w3-justify"></p>
         <div class="w3-row w3-padding-32">
@@ -136,7 +136,8 @@
             </div>
         </div>
     </div>
-<!-- Auction Modal -->
+
+    <!-- Auction Modal -->
     <form action="addAuction.php" method="post">
     <div id="AuctionModal" class="w3-modal">
         <div class="w3-modal-content w3-animate-top w3-card-4">
@@ -159,45 +160,29 @@
         </div>
     </div>
    </form>
-    <!-- Ticket Modal -->
-    <div id="ticketModal" class="w3-modal">
-        <div class="w3-modal-content w3-animate-top w3-card-4">
-            <header class="w3-container w3-teal w3-center w3-padding-32">
-        <span onclick="document.getElementById('ticketModal').style.display='none'"
-              class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-                <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>ITEM</h2>
-            </header>
-            <div class="w3-container">
-                <p><label><i class="fa fa-shopping-cart"></i> Username</label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Username">
-                <p><label><i class="fa fa-user"></i> Bid Amount</label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Amount">
-                <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-                <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-                <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-            </div>
-        </div>
-    </div>
-
     <!-- Items Modal -->
+    <form action="additems.php" method="post">
     <div id="itemsModal" class="w3-modal">
         <div class="w3-modal-content w3-animate-top w3-card-4">
             <header class="w3-container w3-teal w3-center w3-padding-32">
-        <span onclick="document.getElementById('ticketModal').style.display='none'"
-              class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <span onclick="document.getElementById('itemsModal').style.display='none'"
+              class="w3-button w3-teal w3-xlarge w3-display-topright"></span>
                 <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>ITEM</h2>
             </header>
             <div class="w3-container">
-                <p><label><i class="fa fa-shopping-cart"></i> Username</label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Username">
-                <p><label><i class="fa fa-user"></i> Bid Amount</label></p>
-                <input class="w3-input w3-border" type="text" placeholder="Amount">
-                <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-                <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-                <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+                <p><label><i class="fa fa-shopping-cart"></i> Item </label></p>
+                <input name="item" class="w3-input w3-border" type="text" placeholder="item">
+                <p><label><i class="fa fa-user"></i> Condition</label></p>
+                <input name="con" class="w3-input w3-border" type="text" placeholder="good, fair, or poor">
+                 <p><label><i class="fa fa-user"></i> Starting Bid</label></p>
+                <input name="bid" class="w3-input w3-border" type="text" placeholder="$$">
+                 <p><label><i class="fa fa-user"></i> Comments</label></p>
+                <input name="comments" class="w3-input w3-border" type="text" placeholder="Anything else?">
+                <button type="submit" name="submit" class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">SUBMIT<i class="fa fa-check"></i></button>
             </div>
         </div>
     </div>
+   </form>
     
     </div>
    
@@ -271,22 +256,6 @@
         }
     }
 </script>
-<?php
-	if(isset($_POST["submit"])){ //once submit button is hit, go here
-        $email = $_POST['user']; //loads email
-        $pass = $_POST['pass'];
-        $pass2 = $_POST['pass2']; //loads password
-        $name = $_POST['name'];
-        $address = $_POST['address'];
-        $card = $_POST['card'];
-        $cvv = $_POST['CVV'];
-        // if($email==null){
-        // 	 echo "<html><script language='JavaScript'>alert('Make sure no fields are blank!'),history.go(-1)</script></html>";
 
-        // }
-
-	}
-	
-?>
 </body>
 </html>
