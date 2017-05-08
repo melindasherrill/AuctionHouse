@@ -168,10 +168,10 @@
         </form>
             <?php
 
-                $host = "us-cdbr-azure-west-b.cleardb.com";
-                $user = "b3c82d871b9b10";
-                $pass = "329ebdbf";
-                $dbname = "auctionhouse_se320";
+                $host = "localhost";
+                $user = "root";
+                $pass = "";
+                $dbname = "auction";
               
                 $con = mysqli_connect($host, $user, $pass, $dbname) or die("<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>");
                 
@@ -186,7 +186,7 @@
                         echo "<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>";
                     }
 
-                    if(mysqli_query($con, "CALL logIn('".$email."', '".$pass2."')")==TRUE){
+                    if(mysqli_query($con, "CALL logIn('$email', '$pass2')")==TRUE){
                          echo "<html><script language='JavaScript'>window.location.href='/main.php'</script></html>";
                     }
             }

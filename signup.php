@@ -248,7 +248,7 @@
     }
 </script>
 <?php
-	if(isset($_POST["submit"])){ //once submit button is hit, go here
+/*	if(isset($_POST["submit"])){ //once submit button is hit, go here
         $email = $_POST['user']; //loads email
         $pass = $_POST['pass'];
         $pass2 = $_POST['pass2']; //loads password
@@ -304,6 +304,6 @@
 			}
 		}
 
-?>
+*/?>
 </body>
 </html>
