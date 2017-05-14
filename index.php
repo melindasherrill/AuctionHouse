@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Auction Central</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/homepage.css">
+<link rel="shortcut icon" href="img/favicon.ico.png" type="image/x-icon"> 
 <style>
     body {font-family: "Lato", sans-serif}
     .mySlides {display: none}
@@ -48,27 +49,26 @@
     <div class="mySlides w3-display-container w3-center">
         <img src="/img/PinkiePie.png" style="width:100%">
         <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-            <h3>Hello</h3>
+         
         </div>
     </div>
     <div class="mySlides w3-display-container w3-center">
         <img src="/img/PinkiePie2.png" style="width:100%">
         <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-            <h3>World</h3>
+         
         </div>
     </div>
     <div class="mySlides w3-display-container w3-center">
         <img src="/img/PinkiePie3.png" style="width:100%">
         <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-            <h3>!</h3>
+      
         </div>
     </div>
 
     <!-- The Band Section -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-        <h2 class="w3-wide">KEVIN IS THE BEST</h2>
-        <p class="w3-opacity"><i>Pretty Page: Check!</i></p>
-        <p class="w3-justify">Pretty body text: Check!</p>
+        <h2 class="w3-wide">Welcome to Auction Central</h2>
+        
         <div class="w3-row w3-padding-32">
             <div class="w3-third">
                 <p>Meow</p>
@@ -94,7 +94,7 @@
             <ul class="w3-ul w3-border w3-white w3-text-grey">
                 <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">5</span></li>
                 <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">2</span></li>
-                <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
+                <li class="w3-padding">November <span class="w3-tag w3-red w3-margin-left">3</span></li>
             </ul>
 
             <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
@@ -149,7 +149,7 @@
         </div>
     </div>
     <!-- Login Modal -->
-     <form action="index.php" method="post">
+     <form action="login.php" method="post">
     <div id="loginModal" class="w3-modal">
         <div class="w3-modal-content w3-animate-top w3-card-4">
             <header class="w3-container w3-teal w3-center w3-padding-32">
@@ -161,36 +161,11 @@
                 <p><label><i class="fa fa-shopping-cart"></i> Username </label></p>
                 <input name="user" class="w3-input w3-border" type="text" placeholder="Username">
                 <p><label><i class="fa fa-user"></i> Password </label></p>
-                <input name="pass" class="w3-input w3-border" type="text" placeholder="Password">
+                <input name="pass" class="w3-input w3-border" type="password" placeholder="Password">
                 <button name="submit" type="submit" class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">SUBMIT <i class="fa fa-check"></i></button>
                 
             </div>
         </form>
-            <?php
-
-                $host = "localhost";
-                $user = "root";
-                $pass = "";
-                $dbname = "auction";
-              
-                $con = mysqli_connect($host, $user, $pass, $dbname) or die("<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>");
-                
-
-                if(isset($_POST["submit"])) { //once submit button is hit, go here
-                    $email = $_POST['user']; //loads email
-                    $pass2 = $_POST['pass']; //loads password
-
-                     //echo "<html><script language='JavaScript'>window.location.href='/buyercreate.php'</script></html>";
-                    
-                    if(mysqli_connect_errno()){
-                        echo "<html><script language='JavaScript'>alert('Did not connect'),history.go(-1)</script></html>";
-                    }
-
-                    if(mysqli_query($con, "CALL logIn('$email', '$pass2')")==TRUE){
-                         echo "<html><script language='JavaScript'>window.location.href='/main.php'</script></html>";
-                    }
-            }
-            ?>
         </div>
     </div>
     <!-- Sign up Modal -->
@@ -208,9 +183,9 @@
                 <p><label><i class="fa fa-shopping-cart"></i> Email </label></p>
                 <input name= "user" class="w3-input w3-border" type="text" placeholder="Username">
                 <p><label><i class="fa fa-user"></i>Password</label></p>
-                <input name ="pass" class="w3-input w3-border" type="text" placeholder="Password">
+                <input name ="pass" class="w3-input w3-border" type="password" placeholder="Password">
                 <p><label><i class="fa fa-user"></i>Repeat Password</label></p>
-                <input name="pass2" class="w3-input w3-border" type="text" placeholder="Password">
+                <input name="pass2" class="w3-input w3-border" type="password" placeholder="Password">
                 <p><label><i class="fa fa-shopping-cart"></i> Address </label></p>
                 <input name= "address" class="w3-input w3-border" type="text" placeholder="Username">
                 <p><label><i class="fa fa-shopping-cart"></i> Credit Card </label></p>
